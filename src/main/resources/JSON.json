@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "HI-LO",
+    "edad": 29,
+    "altura": 1.85,
+    "eventos": ["Tomorrowland", "EDC Las Vegas", "Ultra Music Festival"]
+  },
+  {
+    "nombre": "Oliver Heldens",
+    "edad": 30,
+    "altura": 1.79,
+    "eventos": ["Tomorrowland", "Creamfields", "AMF"]
+  },
+  {
+    "nombre": "Fisher",
+    "edad": 37,
+    "altura": 1.83,
+    "eventos": ["Coachella", "EDC", "Tomorrowland"]
+  },
+  {
+    "nombre": "Chris Lake",
+    "edad": 41,
+    "altura": 1.80,
+    "eventos": ["Ultra", "Tomorrowland", "EDC"]
+  },
+  {
+    "nombre": "Chris Lorenzo",
+    "edad": 39,
+    "altura": 1.78,
+    "eventos": ["Creamfields", "EDC", "Tomorrowland"]
+  },
+  {
+    "nombre": "JWorra",
+    "edad": 34,
+    "altura": 1.70,
+    "eventos": ["EDC", "Shambhala", "Lightning in a Bottle"]
+  }
+]
