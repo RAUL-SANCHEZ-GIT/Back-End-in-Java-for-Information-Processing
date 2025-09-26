@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -16,27 +17,18 @@ public class JsonReader {
     /**
      * The entry point of application.
      *
-     * @param args the input arguments
-     * @throws IOException the io exception
+     * @param path the JSOMN file path
      */
-    public static void main(String[] args) throws IOException {
+    public List<Dj> readerDjs(String path) {
 
         ObjectMapper objectMapper = new ObjectMapper();
-        File jsonFile = new File("src/main/resources/JSON.json");
+        File jsonFile = new File(path);
 
         try {
             /**
              * Reading JSON file and reading JSON
              */
-            List<Dj> djs = objectMapper.readValue(jsonFile, new TypeReference<List<Dj>>() {});
-
-            System.out.println("DJs cargados desde JSON:");
-            djs.forEach(dj -> {
-                System.out.println("dj = " + dj);
-                System.out.println("DJ Name: " + dj.getNombre());
-                System.out.println("Dj Altura: " + dj.getAltura());
-                System.out.println("---------------");
-            });
+            return objectMapper.readValue(jsonFile, new TypeReference<List<Dj>>() {});
 
             /**
              * RException Errors Handler
@@ -44,6 +36,28 @@ public class JsonReader {
         } catch (IOException e) {
             System.err.println("Error al leer o procesar el archivo JSON: " + e.getMessage());
             e.printStackTrace();
+            return new ArrayList<Dj>();
+        }
+    }
+
+    public Config readerConfig() {
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        File jsonFile = new File("src/main/resources/CONFIG.json");
+
+        try {
+            /**
+             * Reading JSON file and reading JSON
+             */
+            return objectMapper.readValue(jsonFile, Config.class);
+
+            /**
+             * RException Errors Handler
+             */
+        } catch (IOException e) {
+            System.err.println("Error al leer o procesar el archivo JSON: " + e.getMessage());
+            e.printStackTrace();
+            return new Config();
         }
     }
 }

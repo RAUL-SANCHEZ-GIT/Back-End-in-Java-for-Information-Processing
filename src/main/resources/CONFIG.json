@@ -1,0 +1,6 @@
+{
+  "pathReader": "src/main/resources/JSON.json",
+  "pathWriter": "src/main/resources/CSV.csv",
+  "delimiter": ";"
+
+}
