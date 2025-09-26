@@ -29,8 +29,9 @@ class CsvWriterTest {
         // Step 2: Temporary file
         File tempFile = File.createTempFile("test_djs", ".csv");
 
+        CsvWriter csvWriter = new CsvWriter();
         // Step 3: Write CSV
-        CsvWriter.writeDjsToCsv(tempFile.getAbsolutePath(), testDjs, ',');
+        csvWriter.writeDjsToCsv(tempFile.getAbsolutePath(), testDjs, ',');
 
         // Step 4: Check file exists
         assertTrue(tempFile.exists(), "CSV file should exist");
